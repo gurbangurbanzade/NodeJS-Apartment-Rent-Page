@@ -1,0 +1,66 @@
+@media (max-width: 992px) {
+  .page {
+    width: auto;
+    overflow-x: auto;
+    .page__navbar {
+      display: block;
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      color: white;
+      top: 0;
+      overflow: hidden;
+      padding: 1.3rem 0;
+      z-index: 1;
+      span {
+        margin-left: 1.6rem;
+        font-size: 2.4rem;
+      }
+      i {
+        font-size: 2.4rem;
+        margin-right: 1.6rem;
+      }
+    }
+    .page__left {
+      display: none;
+    }
+    .page__right {
+      width: 100%;
+      margin-left: 0rem;
+      margin-top: 8rem;
+    }
+  }
+  .modal-window {
+    div {
+      width: 75%;
+      .modalBTN {
+        width: 13rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .page__right__main__BTN {
+    width: 100% !important;
+  }
+  .page__right__main__extraInfo__textBox,
+  .page__right__main__rules__textBox {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .page__right__main__space__textBox {
+    span {
+      font-size: 1.6rem !important;
+    }
+  }
+  .modal-window {
+    div {
+      width: 70%;
+    }
+  }
+}

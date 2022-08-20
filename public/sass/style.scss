@@ -1,0 +1,294 @@
+@import "library";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.page {
+  margin: 0 auto;
+  width: 100rem;
+  display: flex;
+  border-right: 0.1rem solid #ccc;
+  border-left: 0.1rem solid #ccc;
+  .page__navbar {
+    display: none;
+    padding: 0rem !important;
+    .page__navbar__menuIcon {
+      cursor: pointer;
+      text-align: center;
+      padding: 1.5rem 1.7rem;
+      margin-right: 0rem !important;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.55);
+      }
+    }
+  }
+  // Left side
+
+  .page__left {
+    overflow-y: scroll;
+    position: fixed;
+    background-color: #f1f1f1;
+    width: 26rem;
+    height: 100vh;
+    display: block;
+    // z-index: 0;
+    .page__left__header {
+      @include column;
+      margin-left: 1.5rem;
+      .page__left__header__text {
+        font-size: 2.4rem;
+        margin-top: 2.6rem;
+      }
+      .page__left__header__textSecond {
+        font-size: 2.4rem;
+        margin-top: 1.8rem;
+      }
+      .page__left__header__info {
+        margin-top: 1.7rem;
+      }
+    }
+    .page__left__form {
+      margin: 5rem 1.5rem 3rem 1.5rem;
+
+      form {
+        div {
+          @include column;
+          margin-bottom: 2.1rem;
+          label {
+            font-size: 1.5rem;
+            margin-bottom: 1.6rem;
+          }
+          input {
+            // height: 3rem;
+            border: 0.1rem solid #ccc;
+            padding: 1rem;
+            font-size: 1.5rem;
+          }
+        }
+        button {
+          color: white;
+          background-color: #4caf50;
+          border: none;
+          padding: 1rem 1.6rem;
+          width: 100%;
+          text-align: left;
+          font-family: "Raleway", sans-serif;
+          font-size: 1.5rem;
+          &:hover {
+            background-color: #ccc;
+            color: black;
+          }
+          i {
+            margin-right: 1.6rem;
+          }
+        }
+      }
+    }
+    .page__left__footer {
+      @include column;
+      span {
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+    }
+    .page__left__closeBTN {
+      color: black;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+      display: none;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.55);
+      }
+      i {
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // End Left side
+  //-----------------------------
+  // Right side
+  .page__right {
+    margin-left: 26rem;
+    width: 74rem;
+
+    .page__right__container {
+      @include column;
+      margin: 1.5rem 1.5rem;
+      .page__right__header {
+        @include column;
+        .page__right__header__text {
+          color: #4caf50;
+          font-size: 3rem;
+          margin-bottom: 1.5rem;
+        }
+        .page__right__header__photoUp {
+          position: relative;
+          margin-bottom: 1rem;
+          .page__right__header__photoUp__info {
+            position: absolute;
+            color: white;
+            bottom: 1.6rem;
+            background-color: black;
+            padding: 1.6rem 1rem;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .page__right__header__photoDown {
+          display: flex;
+          align-items: stretch;
+          div {
+            flex-grow: 1;
+            margin-right: 1.5rem;
+            img {
+              cursor: pointer;
+              width: 100%;
+            }
+
+            &:last-child {
+              margin-right: 0rem !important;
+            }
+          }
+        }
+      }
+      .page__right__main {
+        .page__right__main__space,
+        .page__right__main__amenties,
+        .page__right__main__extraInfo,
+        .page__right__main__rules {
+          margin-top: 2.5rem;
+          border-bottom: 0.05rem solid #eee;
+          .page__right__main__space__textHeader,
+          .page__right__main__amenties__textHeader,
+          .page__right__main__extraInfo__textHeader,
+          .page__right__main__rules__textHeader {
+            font-size: 2rem;
+            font-weight: bold;
+          }
+          .page__right__main__space__textBox,
+          .page__right__main__amenties__textBox {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;
+            span {
+              margin-bottom: 2rem;
+              font-size: 1.8rem;
+            }
+          }
+          .page__right__main__extraInfo__textBox,
+          .page__right__main__rules__textBox {
+            span {
+              margin: 1.6rem 0rem;
+              width: 100%;
+              display: block;
+              i {
+                font-size: 1.8rem;
+              }
+            }
+            a {
+              .page__right__main__BTN {
+                border: none;
+                background-color: #4caf50;
+                color: white;
+                width: 33.33%;
+                font-family: "Raleway", sans-serif;
+                font-size: 1.5rem;
+                padding: 1rem 1.6rem;
+                margin-bottom: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                  background-color: #ccc;
+                  color: black;
+                }
+              }
+            }
+          }
+        }
+        .page__right__main__rules {
+          border: none;
+        }
+      }
+    }
+
+    .page__right__footer {
+      border-top: 0.05rem solid #eee;
+      .page__right__container {
+        @include column;
+        .page__right__footer__textHeader {
+          font-size: 3rem;
+          margin: 2rem 0rem;
+        }
+        .page__right__footer__textContact {
+          margin-bottom: 0.5rem;
+          i {
+            margin-right: 1.6rem;
+          }
+        }
+        form {
+          margin: 1.5rem 0;
+          @include column;
+          span {
+            margin-bottom: 1.6rem;
+          }
+          input {
+            margin-bottom: 1.4rem;
+            padding: 1rem 0.8rem;
+            border: 0.1rem solid #ccc;
+            font-size: 1.6rem;
+          }
+          .page__right__main__BTN {
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            width: 33.33%;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.5rem;
+            padding: 1rem 1.6rem;
+            margin-bottom: 3rem;
+            &:hover {
+              background-color: #ccc;
+              color: black;
+            }
+          }
+        }
+        span {
+          a {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  // End Right Side
+}
+@import "responsive";

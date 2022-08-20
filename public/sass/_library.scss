@@ -1,0 +1,135 @@
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkText {
+  margin-top: 0.5rem;
+  color: red;
+  font-weight: bold;
+}
+.checkMessage,
+.checkEmail {
+  margin-top: -1rem;
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+// Slider code
+.slideHover {
+  filter: opacity(65%);
+  &:hover {
+    filter: opacity(100%);
+  }
+}
+.slide {
+  filter: opacity(100%);
+}
+// End Slider code
+// Modal code
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  // pointer-events: none;
+  transition: all 0.3s;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    // pointer-events: auto;
+  }
+  div {
+    @include column;
+    align-items: center;
+    width: 800px;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem 4rem;
+    background: white;
+    text-align: center;
+
+    .modal-close {
+      color: black;
+      position: absolute;
+      right: 3rem;
+      text-align: center;
+      top: 1.5rem;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.55);
+      }
+      i {
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+    }
+    .modalHeader {
+      font-weight: 400;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+    input {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      font-size: 1.5rem;
+    }
+    .checkEmailText {
+      margin-top: 0.5rem;
+      color: red;
+      font-weight: bold;
+      font-size: 1.6rem !important;
+      display: none;
+    }
+    .modalBTN {
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      // width: 33.33%;
+      font-family: "Raleway", sans-serif;
+      font-size: 1.5rem;
+      padding: 1.5rem 2.5rem;
+      margin-top: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ccc;
+        color: black;
+      }
+    }
+  }
+}
+
+//End modal code
+//Responsive Click Menu
+.page__dark__BG {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 1;
+  display: none;
+}
+// End Responsive Click Menu

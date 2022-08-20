@@ -1,25 +1,34 @@
 // Imports
 const express = require("express");
+const bodyParser = require("body-parser");
+const { check, validationResult } = require("express-validator");
 const app = express();
 const port = process.env.PORT || 3000;
 
 // Static Files
 app.use(express.static("public"));
-app.use("/css", express.static(__dirname + "public/css"));
+// Specific folder example
+app.use("/sass", express.static(__dirname + "public/sass"));
 app.use("/js", express.static(__dirname + "public/js"));
-app.use("/img", express.static(__dirname + "public/img"));
+app.use("/img", express.static(__dirname + "public/image"));
 
-// Set Views
+// // Set View's
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+// Navigation
 app.get("", (req, res) => {
-  res.render("index", { text: "This is EJS" });
+  res.render("index");
 });
 
-app.get("/about", (req, res) => {
-  res.render("about", { text: "About Page" });
+app.get("/register", (req, res) => {
+  res.render("register");
 });
 
-//  Listen on port 3000
-app.listen(port, () => console.info(`Listening on port ${port}`));
+app.post("/register", urlencodedParser, (req, res) => {
+  res.json(req.body);
+});
+
+app.listen(port, () => console.info(`App listening on port ${port}`));

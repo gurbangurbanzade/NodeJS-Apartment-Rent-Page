@@ -1,0 +1,510 @@
+.checkText {
+  margin-top: 0.5rem;
+  color: red;
+  font-weight: bold;
+}
+
+.checkMessage,
+.checkEmail {
+  margin-top: -1rem;
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.slideHover {
+  filter: opacity(65%);
+}
+.slideHover:hover {
+  filter: opacity(100%);
+}
+
+.slide {
+  filter: opacity(100%);
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-window div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 4rem;
+  background: white;
+  text-align: center;
+}
+.modal-window div .modal-close {
+  color: black;
+  position: absolute;
+  right: 3rem;
+  text-align: center;
+  top: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+}
+.modal-window div .modal-close:hover {
+  background-color: rgba(128, 128, 128, 0.55);
+}
+.modal-window div .modal-close i {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.modal-window div .modalHeader {
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.modal-window div p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.modal-window div input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+.modal-window div .checkEmailText {
+  margin-top: 0.5rem;
+  color: red;
+  font-weight: bold;
+  font-size: 1.6rem !important;
+  display: none;
+}
+.modal-window div .modalBTN {
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  padding: 1.5rem 2.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.modal-window div .modalBTN:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.page__dark__BG {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 1;
+  display: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.page {
+  margin: 0 auto;
+  width: 100rem;
+  display: flex;
+  border-right: 0.1rem solid #ccc;
+  border-left: 0.1rem solid #ccc;
+}
+.page .page__navbar {
+  display: none;
+  padding: 0rem !important;
+}
+.page .page__navbar .page__navbar__menuIcon {
+  cursor: pointer;
+  text-align: center;
+  padding: 1.5rem 1.7rem;
+  margin-right: 0rem !important;
+}
+.page .page__navbar .page__navbar__menuIcon:hover {
+  background-color: rgba(128, 128, 128, 0.55);
+}
+.page .page__left {
+  overflow-y: scroll;
+  position: fixed;
+  background-color: #f1f1f1;
+  width: 26rem;
+  height: 100vh;
+  display: block;
+}
+.page .page__left .page__left__header {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+.page .page__left .page__left__header .page__left__header__text {
+  font-size: 2.4rem;
+  margin-top: 2.6rem;
+}
+.page .page__left .page__left__header .page__left__header__textSecond {
+  font-size: 2.4rem;
+  margin-top: 1.8rem;
+}
+.page .page__left .page__left__header .page__left__header__info {
+  margin-top: 1.7rem;
+}
+.page .page__left .page__left__form {
+  margin: 5rem 1.5rem 3rem 1.5rem;
+}
+.page .page__left .page__left__form form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.1rem;
+}
+.page .page__left .page__left__form form div label {
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+.page .page__left .page__left__form form div input {
+  border: 0.1rem solid #ccc;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.page .page__left .page__left__form form button {
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  padding: 1rem 1.6rem;
+  width: 100%;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+}
+.page .page__left .page__left__form form button:hover {
+  background-color: #ccc;
+  color: black;
+}
+.page .page__left .page__left__form form button i {
+  margin-right: 1.6rem;
+}
+.page .page__left .page__left__footer {
+  display: flex;
+  flex-direction: column;
+}
+.page .page__left .page__left__footer span {
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.page .page__left .page__left__footer span:hover {
+  background-color: #ccc;
+}
+.page .page__left .page__left__closeBTN {
+  color: black;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  display: none;
+}
+.page .page__left .page__left__closeBTN:hover {
+  background-color: rgba(128, 128, 128, 0.55);
+}
+.page .page__left .page__left__closeBTN i {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.page .page__right {
+  margin-left: 26rem;
+  width: 74rem;
+}
+.page .page__right .page__right__container {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1.5rem;
+}
+.page .page__right .page__right__container .page__right__header {
+  display: flex;
+  flex-direction: column;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__text {
+  color: #4caf50;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__photoUp {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__photoUp .page__right__header__photoUp__info {
+  position: absolute;
+  color: white;
+  bottom: 1.6rem;
+  background-color: black;
+  padding: 1.6rem 1rem;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__photoUp img {
+  width: 100%;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__photoDown {
+  display: flex;
+  align-items: stretch;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__photoDown div {
+  flex-grow: 1;
+  margin-right: 1.5rem;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__photoDown div img {
+  cursor: pointer;
+  width: 100%;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__photoDown div:last-child {
+  margin-right: 0rem !important;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__space,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules {
+  margin-top: 2.5rem;
+  border-bottom: 0.05rem solid #eee;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__space__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__amenties__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__space__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__amenties__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__space__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__amenties__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__space__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__amenties__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textHeader,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textHeader {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__space__textBox,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__amenties__textBox,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__space__textBox,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__amenties__textBox,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__space__textBox,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__amenties__textBox,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__space__textBox,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__amenties__textBox {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__space__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__amenties__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__space__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__amenties__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__space__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__amenties__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__space__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__amenties__textBox span {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox span,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox span {
+  margin: 1.6rem 0rem;
+  width: 100%;
+  display: block;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox span i,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textBox span i,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textBox span i,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textBox span i,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textBox span i,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textBox span i,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox span i,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox span i {
+  font-size: 1.8rem;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox a .page__right__main__BTN {
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  width: 33.33%;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem 1.6rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox a .page__right__main__BTN:hover {
+  background-color: #ccc;
+  color: black;
+}
+.page .page__right .page__right__container .page__right__main .page__right__main__rules {
+  border: none;
+}
+.page .page__right .page__right__footer {
+  border-top: 0.05rem solid #eee;
+}
+.page .page__right .page__right__footer .page__right__container {
+  display: flex;
+  flex-direction: column;
+}
+.page .page__right .page__right__footer .page__right__container .page__right__footer__textHeader {
+  font-size: 3rem;
+  margin: 2rem 0rem;
+}
+.page .page__right .page__right__footer .page__right__container .page__right__footer__textContact {
+  margin-bottom: 0.5rem;
+}
+.page .page__right .page__right__footer .page__right__container .page__right__footer__textContact i {
+  margin-right: 1.6rem;
+}
+.page .page__right .page__right__footer .page__right__container form {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.page .page__right .page__right__footer .page__right__container form span {
+  margin-bottom: 1.6rem;
+}
+.page .page__right .page__right__footer .page__right__container form input {
+  margin-bottom: 1.4rem;
+  padding: 1rem 0.8rem;
+  border: 0.1rem solid #ccc;
+  font-size: 1.6rem;
+}
+.page .page__right .page__right__footer .page__right__container form .page__right__main__BTN {
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  width: 33.33%;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem 1.6rem;
+  margin-bottom: 3rem;
+}
+.page .page__right .page__right__footer .page__right__container form .page__right__main__BTN:hover {
+  background-color: #ccc;
+  color: black;
+}
+.page .page__right .page__right__footer .page__right__container span a {
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .page {
+    width: auto;
+    overflow-x: auto;
+  }
+  .page .page__navbar {
+    display: block;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    color: white;
+    top: 0;
+    overflow: hidden;
+    padding: 1.3rem 0;
+    z-index: 1;
+  }
+  .page .page__navbar span {
+    margin-left: 1.6rem;
+    font-size: 2.4rem;
+  }
+  .page .page__navbar i {
+    font-size: 2.4rem;
+    margin-right: 1.6rem;
+  }
+  .page .page__left {
+    display: none;
+  }
+  .page .page__right {
+    width: 100%;
+    margin-left: 0rem;
+    margin-top: 8rem;
+  }
+  .modal-window div {
+    width: 75%;
+  }
+  .modal-window div .modalBTN {
+    width: 13rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .page__right__main__BTN {
+    width: 100% !important;
+  }
+  .page__right__main__extraInfo__textBox,
+.page__right__main__rules__textBox {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .page__right__main__space__textBox span {
+    font-size: 1.6rem !important;
+  }
+  .modal-window div {
+    width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */

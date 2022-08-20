@@ -13,14 +13,10 @@
     />
     <!-- End Raleway Font -->
     <!-- CSS file -->
-    <link rel="stylesheet" href="sass/style.css" />
-    <title>Home</title>
+    <link rel="stylesheet" href="public/sass/style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <!-- <form action="/register" method="POST">
-      <input type="text" name="ad" id="" />
-      <button type="submit">gonder</button>
-    </form> -->
     <!-- Home Page -->
     <section class="page">
       <!-- Navbar -->
@@ -39,7 +35,7 @@
           <span class="page__left__header__info">per night</span>
         </div>
         <div class="page__left__form">
-          <form class="form" action="/register" method="POST">
+          <form class="form">
             <div class="form__child">
               <label for=""
                 ><i class="fa-regular fa-calendar-check"></i> Check in</label
@@ -50,7 +46,6 @@
                 onkeyup="deleteError(this)"
                 class="checkInput"
                 id="inputCheckIn"
-                name="Giriş Tarixi"
               />
             </div>
             <div class="form__child">
@@ -63,18 +58,17 @@
                 onkeyup="deleteError(this)"
                 class="checkInput"
                 id="inputCheckOut"
-                name="Çıxış Tarixi"
               />
             </div>
             <div class="form__child">
               <label for=""><i class="fa-solid fa-person"></i> Adults</label>
-              <input type="number" value="1" min="1" name="Böyük Sayı" />
+              <input type="number" value="1" min="1" />
             </div>
             <div class="form__child">
               <label for=""
                 ><i class="fa-solid fa-child-reaching"></i> Kids</label
               >
-              <input type="number" value="0" min="0" name="Uşaq Sayı" />
+              <input type="number" value="0" min="0" />
             </div>
             <button type="submit" class="searchBTN">
               <i class="fa-solid fa-magnifying-glass"></i> Search availability
@@ -102,23 +96,23 @@
               </span>
               <div class="page__right__header__photoUp__box">
                 <img
-                  src="image/livingroom.jpg"
+                  src="public/image/livingroom.jpg"
                   alt="Living Room"
                   style="display: block"
                 />
 
                 <img
-                  src="image/diningroom.jpg"
+                  src="public/image/diningroom.jpg"
                   alt="Dining Room"
                   style="display: none"
                 />
                 <img
-                  src="image/bedroom.jpg"
+                  src="public/image/bedroom.jpg"
                   alt="Bedroom"
                   style="display: none"
                 />
                 <img
-                  src="image/livingroom2.jpg"
+                  src="public/image/livingroom2.jpg"
                   alt="Living Room II"
                   style="display: none"
                 />
@@ -127,24 +121,28 @@
             <div class="page__right__header__photoDown">
               <div>
                 <img
-                  src="image/livingroom.jpg"
+                  src="public/image/livingroom.jpg"
                   alt="Living Room"
                   class="slide"
                 />
               </div>
               <div>
                 <img
-                  src="image/diningroom.jpg"
+                  src="public/image/diningroom.jpg"
                   alt="Dining Room"
                   class="slideHover"
                 />
               </div>
               <div>
-                <img src="image/bedroom.jpg" alt="Bedroom" class="slideHover" />
+                <img
+                  src="public/image/bedroom.jpg"
+                  alt="Bedroom"
+                  class="slideHover"
+                />
               </div>
               <div>
                 <img
-                  src="image/livingroom2.jpg"
+                  src="public/image/livingroom2.jpg"
                   alt="Living Room II"
                   class="slideHover"
                 />
@@ -249,7 +247,7 @@
                     onkeyup="deleteEmailError()"
                   />
                   <span class="checkEmailText">Email is not valid</span>
-                  <button type="submit" class="page__right__main__BTN modalBTN">
+                  <button class="page__right__main__BTN modalBTN">
                     Subscribe
                   </button>
                   <br />
@@ -271,17 +269,15 @@
             <span class="page__right__footer__textContact"
               ><i class="fa-solid fa-envelope"></i> Email: mail@mail.com</span
             >
-            <form action="/register" class="messageForm" method="POST">
+            <form action="" class="messageForm">
               <span>Questions? Go ahead, ask them:</span>
               <input
-                name="Ad"
                 type="text"
                 placeholder="Name"
                 onkeyup="deleteMessageError(this)"
               />
               <span class="checkMessage">This field is required</span>
               <input
-                name="Mail"
                 type="email"
                 placeholder="Email"
                 onkeyup="deleteMessageError(this)"
@@ -289,7 +285,6 @@
               <span class="checkMessage">This field is required</span>
               <span class="checkEmail">Email is not Valid</span>
               <input
-                name="Mətn"
                 type="text"
                 placeholder="Message"
                 onkeyup="deleteMessageError(this)"
@@ -315,6 +310,6 @@
     ></script>
     <!-- End Font Awesome -->
     <!-- JS file -->
-    <script src="js/app.js"></script>
+    <script src="public/js/app.js"></script>
   </body>
 </html>
